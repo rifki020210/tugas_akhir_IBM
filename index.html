@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhamad Rifki Rahmadi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #088395;
+            color: #EBF4F6;
+            font-family: "Ubuntu", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            /* padding: 30px; */
+            background-color: #071952;
+            /* border: 5px solid black; */
+        }
+
+        .introduction {
+        text-align: justify;
+        font-size: 30px;
+        text-align: center;
+        float: left;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        animation-duration: 5s;
+        position: relative;
+        }
+
+        .flex_center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .name {
+            margin-left: 3%;
+        }
+
+        .menu-navbar {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .menu-navbar li {
+            list-style: none;
+            
+        }
+
+        .menu-navbar li a {
+            color: #EBF4F6;
+            text-decoration: none;
+        }
+
+        .menu-navbar li a:hover {
+            padding: 10px;
+            font-weight: bold;
+            /* background-color: #37B7C3; */
+            border-radius: 11px;
+            color: #37B7C3;
+            text-decoration: underline;
+        }
+
+
+        .menu-navbar li {
+            margin: 0 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 0 15px; 
+            box-sizing: border-box;
+        }
+
+        .about-row {
+            display: flex;
+        }
+
+
+        .about-image img {
+            width: 75%;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        .about-image {
+            flex-grow: 6;
+            padding: 8% 3% 0 10%;
+        }
+
+        .about-content {
+            flex-grow: 6;
+            padding: 5% 0 0 0;
+        }
+
+        h2 {
+            color: #071952;
+        }
+
+        #skills {
+            margin-top: 5%;
+        }
+
+        #skills h2 {
+            margin-left: 4%;
+            margin-bottom: 0;
+        } 
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        .skill {
+            width: 2in;
+            border-radius: 6px;
+            text-align: center;
+            margin: 15px 50px 15px 50px;
+            padding: 10px;
+            background-color: #071952;
+            box-shadow: 0 3px 10px #EBF4F6;
+        }
+
+        #projects {
+            margin: 13% 0;
+        }
+
+        #projects h2 {
+            margin-left: 4%;
+        } 
+
+        .projects-container {
+            margin-top: 30px;
+            margin-left: 60px;
+        }
+
+        .projects-container hr {
+            border: 1px solid lightgray;
+            width: 75%;
+            margin-left: 5cm;
+        }
+
+        /* Recommendations */
+        #recommendations h2 {
+            margin-left: 10%;
+            margin-bottom: 0;
+        }
+
+        .all_recommendations {
+            display: flex;
+            align-items: center;
+            margin-left: 1in;
+            flex-direction: row;
+            flex-flow: wrap;
+            padding: 20px;
+        }
+
+        .recommendation {
+            font-style: italic;
+            text-align: left;
+            width: 21.500rem;
+            padding: 1rem;
+            background-color: #071952;
+            border-radius: 11px;
+            box-shadow: 0 3px 10px #EBF4F6;
+            padding: 20px;
+            margin: 10px;
+            font-size: 18px;
+            height:150px;
+        }
+
+        .recommendation span {
+            color: #EBF4F6;
+            font-size: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .recommendation footer {
+            margin-top: -2px;
+        }
+        
+
+        /* Recommendation Form */
+
+        input, textarea {
+        margin: 10px;  
+        width:100%;
+        }
+
+        fieldset {
+        display: flexbox;
+        align-content: center;
+        justify-content: center;  
+        padding: 25px; 
+        margin-left: 50px; 
+        margin-right: 50px;   
+        border: thin solid #088395;
+        width: 50%;
+        }
+
+        /* Buttons */
+
+        button {
+        background-color: #EBF4F6;
+        border: 1px solid #071952;
+        color: #071952;
+        display: block;
+        border-radius: 6px;
+        text-align: center;
+        margin: 50px;
+        padding: 10px;
+        width: 2in;
+        font-size: 20px;
+        }
+
+        button:hover {
+        background-color: #071952;
+        border: 1px solid #071952;
+        color: #EBF4F6;
+        display: block;
+        border-radius: 6px;
+        text-align: center;
+        cursor: pointer;
+        }
+
+        /* Scroll to Top Button */
+
+        .iconbutton{
+        width: 48px;
+        height: 48px;
+        border-radius: 100%;
+        background-color: #071952;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 3%;
+        bottom: 3%;
+        cursor: pointer;
+        }
+
+        .iconbutton img {
+            width: 50%;
+            height: auto;
+            margin-left: 25%;
+        }
+
+        /* Form Pop-up */
+
+        .popup {
+            width:400px;
+            background-color: #37B7C3;
+            border-radius: 3mm;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            position: fixed;
+            /* padding: 30px; */
+            visibility: hidden;
+            /* box-shadow: 0 3px 10px #EBF4F6; */
+        }
+
+        .popup img {
+            padding-top: 20px;
+        }
+
+        .popup button {
+            background-color: #071952;
+            border: 1px solid #EBF4F6;
+            color: #EBF4F6;
+            display: block;
+            border-radius: 6px;
+            text-align: center;
+            margin: 50px;
+            padding: 10px;
+            width: 2in;
+            font-size: 20px;
+            margin-left: 25%;
+        }
+
+        .popup button:hover {
+            background-color: #EBF4F6;
+            border: 2px solid #071952;
+            color: #071952;
+            display: block;
+            font-weight: bolder;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 25%;
+        }
+
+
+    </style>
+
+<script>
+    function addRecommendation() {
+    // Get the message of the new recommendation
+    let recommendation = document.getElementById("new_recommendation");
+    let name = document.getElementById("name");
+        // If the user has left a recommendation, display a pop-up
+        if (recommendation.value != null && recommendation.value.trim() != "") {
+            console.log("New recommendation added");
+            //Call showPopup here
+
+            // Create a new 'recommendation' element and set it's value to the user's message
+            var element = document.createElement("div");
+            element.setAttribute("class","recommendation");
+            element.innerHTML = "\<span\>&#8220;\</span\>" + recommendation.value + "\<span\>&#8221;\</span\>" + "<footer>— " + name.value+ "</footer>";
+            // Add this element to the end of the list of recommendations
+            document.getElementById("all_recommendations").appendChild(element); 
+            
+            // Reset the value of the textarea
+            recommendation.value = "";
+
+            // Show the popup
+            showPopup(true);
+        }
+    }
+
+    function showPopup(bool) {
+    if (bool) {
+        document.getElementById('popup').style.visibility = 'visible'
+    } else {
+        document.getElementById('popup').style.visibility = 'hidden'
+    }
+    }
+</script>
+</head>
+<body>
+    <nav>
+            <div id="home" class="name">
+                <h1>Muhamad Rifki Rahmadi</h1>
+            </div>
+            <div>
+                <ul class="menu-navbar">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                </ul>
+            </div>
+        
+    </nav>
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <div class="about-row">
+                <div class="about-image">
+                    <img src="rifki.png" alt="" srcset="">
+                </div>
+                <div class="about-content">
+                    <h2>Hi, I'm Muhamad Rifki Rahmadi!</h2>
+                    <p>My name is Muhamad Rifki Rahmadi. I have the ability to assemble computers and create websites, although I am still in the learning stage. I am also able to type well. Currently, I work as an admin seller for an online store.</p>
+                    <p>I am also a web developer with skills in PHP, HTML, CSS, Bootstrap, Laravel, GIT, and some JavaScript.</p>
+                    <p>I have basic knowledge of Mikrotik and feel confident using it, although still as a junior. I also have practical work experience from a two-month internship at a computer store called Amy Komputer during my vocational high school.</p>
+                    <p>I also have basic skills in configuring the Debian operating system, though still at a junior level.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+     <section id="skills">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill">
+                    <img src="logo/html-logo.png" alt="" srcset="">
+                    <h6>HTML</h6>
+                    <p>6 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/css-logo.png" alt="" srcset="">
+                    <h6>CSS</h6>
+                    <p>4 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/javascript-logo.png" alt="" srcset="">
+                    <h6>JavaScript</h6>
+                    <p>3 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/php-logo.png" alt="" srcset="">
+                    <h6>PHP</h6>
+                    <p>6 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/bootstrap-logo.png" alt="" srcset="">
+                    <h6>Bootstrap</h6>
+                    <p>3 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/laravel-logo.png" style="width:144px; height: 144px;">
+                    <h6>Laravel</h6>
+                    <p>1 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/mysql-logo.png" alt="" srcset="">
+                    <h6>MySQL</h6>
+                    <p>6 years experience</p>
+                </div>
+                <div class="skill">
+                    <img src="logo/git-logo.png" alt="" srcset="">
+                    <h6>Git</h6>
+                    <p>3 years experience</p>
+                </div>
+            </div>
+        </div>
+     </section>
+
+     <!-- Projects -->
+      <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3>Social Media</h3>
+                    <ul>
+                        <li>Our project aims to develop a comprehensive social media platform using a combination of HTML, CSS, JavaScript, MySQL, and PHP. The platform will offer users a seamless experience for connecting, sharing, and interacting with each other through various features.</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="project-card">
+                    <h3>Online Shop</h3>
+                    <ul>
+                        <li>This project is an online shop designed to provide users with a seamless shopping experience. The application is built using modern web technologies, including HTML, CSS, JavaScript, MySQL, and PHP OOP, and follows the MVC (Model-View-Controller) architecture to ensure a clean and maintainable codebase.</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="project-card">
+                    <h3>Home Management System</h3>
+                    <ul>
+                        <li>Our project is a comprehensive home management system designed to streamline and automate various household operations. This system leverages modern web technologies, including HTML, CSS, JavaScript, MySQL, and PHP Object-Oriented Programming (OOP), implemented using the Model-View-Controller (MVC) architectural pattern.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </section>
+
+      <!-- Rekomendations -->
+       <section id="recommendations" >
+            <h2>Recommendations</h2>
+            <div class="all_recommendations" id="all_recommendations">
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                        Rifki developed a complex web application for our startup, and his work was nothing short of exceptional. 
+                        His technical skills and innovative solutions greatly contributed to the success of our platform. 
+                        I highly recommend Rifki for any web development projects.
+                    <span>&#8221;</span>
+                    <footer>— David Chen - Founder, Startup Hub</footer>
+                </div>
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                        Rifki's proficiency with Mikrotik and Debian configuration has been a tremendous help in optimizing our network infrastructure. 
+                        His practical approach and willingness to go the extra mile ensure that our systems run smoothly and efficiently.
+                    <span>&#8221;</span>
+                    <footer>— Emily White - IT Specialist</footer>
+                </div>
+
+                <div class="recommendation">
+                    <span>&#8220;</span>
+                        Rifki's technical proficiency and quick learning abilities are commendable. 
+                        His experience with configuring servers and networks has been beneficial in ensuring our web services are reliable and secure. 
+                        He is an invaluable member of our IT team.
+                    <span>&#8221;</span>
+                    <footer>— Sam Wilson - System Administrator</footer>
+                </div>
+            </div>
+       </section>
+
+       <!-- Leave a Recommendation -->
+        <section id="contact">
+            <div class="flex_center">
+                <fieldset>
+                    <legend class="introduction">Leave a Recommendation</legend>          
+                    <input type="text" placeholder="Name (Optional)" id="name"> <br/>
+                    <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+                    <div class="flex_center">
+                      <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+                    </div>
+                  </fieldset>
+            </div>
+        </section>
+
+        <div class="iconbutton">
+            <a href="#home">
+              <!--Add the code here for the logo to appear and the icon to be actionable-->
+              <img src="logo/up-arrow.png" alt="" srcset="">
+            </a>
+        </div>
+
+        <div class="popup" id="popup" class="flex_center">
+            <img src="logo/checkmark.png"/>
+            <h3>Thanks your send for recommendation</h3>
+            <button onclick="showPopup(false)">Ok</button>
+        </div>
+
+</body>
+</html>
